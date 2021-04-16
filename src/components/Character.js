@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components'
 import axios from 'axios';
-
 
 const CharDiv = styled.div`
     font-family: Audiowide;
@@ -18,7 +17,6 @@ const CharDiv = styled.div`
     }
 
     p{  
-        border: 1px solid black;
         border-radius: 20px;
         padding: 0 5px;
         color: white;
@@ -33,8 +31,6 @@ const CharDiv = styled.div`
 
 `
 
-
-
 export default function Character({ character }) {
 
     return (
@@ -42,6 +38,5 @@ export default function Character({ character }) {
             <h2>{character.name}</h2>
             <p>{character.birth_year}</p>
         </CharDiv>
-
     )
 };

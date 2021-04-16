@@ -19,7 +19,6 @@ const PageTitle = styled.h1`
   padding: 0;
   margin: 2% 0;
 `
-
 const CharContainer = styled.div`
   background-color: rgb(10, 82, 9, .3);
   border-radius: 10px;
@@ -34,16 +33,13 @@ const CharContainer = styled.div`
     margin: 4% 0;
   }
   `
-
   const App = () => {
     const [characters, setCharacters] =  useState([]);
     
-
     useEffect(() => {
       axios.get('https://swapi.dev/api/people/')
       .then(res => {
         setCharacters(res.data)
-        console.log(res)
       })
       .catch(err => {
         console.log(err)
